@@ -29,6 +29,37 @@ public class Tree {
 
 	}
 
+	public Integer findMin(Tree node) {
+
+		if(node == null) {
+			return null;
+		}
+
+		while(node.left != null) {
+			node = node.left;
+		}
+
+		System.out.println("The MIN element is ::" + node.data);
+		return node.data;
+	}
+
+	public Integer findMax(Tree node) {
+
+		if(node == null) {
+			return null;
+		}
+
+		while(node.right != null) {
+			node = node.right;
+		}
+
+		System.out.println("The MAX element is ::" + node.data);
+		return node.data;
+	}
+
+	public void deleteNode(Tree node, int x) {
+		if()
+	}
 	/*
 	Inorder Traversal 
 	*/
@@ -49,7 +80,9 @@ public class Tree {
 		root.insert(root, 7);
 		root.insert(root, 6);
 
-		root.search(root, 25);
+		/*Check for non null values*/
+		root.findMin(root);
+		root.findMax(root);
 
 		root.traversal(root);
 		
